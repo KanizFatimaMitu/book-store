@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar';
 
 import BookCard from '../Components/BookCard';
 import BookNav from '../Components/BookNav';
+import AddBook from '../Components/AddBook';
 
 
 const Home = () => {
@@ -16,6 +17,9 @@ const Home = () => {
                         <div class="lws-bookContainer">
                             <BookCard></BookCard>
                         </div>
+                    </div>
+                    <div class="p-4 overflow-hidden bg-white shadow-cardShadow rounded-md">
+                        <AddBook></AddBook>
                     </div>
                 </div>
             </main>
