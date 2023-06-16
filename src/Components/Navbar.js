@@ -1,10 +1,11 @@
 import React from 'react';
+import book from '../assests/book.jpg'
 
 const Navbar = () => {
     return (
         <nav class="py-4 2xl:px-6">
             <div class="container flex items-center justify-between">
-                <img src="./images/logo.svg" width="150px" class="object-contain" />
+                <img src={book} alt='' />
 
                 <ul class="hidden md:flex items-center space-x-6">
                     <li class="font-semibold cursor-pointer">Book Store</li>
