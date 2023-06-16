@@ -17,6 +17,18 @@ const AddBook = () => {
             featured
         }
         console.log(data)
+        fetch('http://localhost:5000/books',{
+            method: 'POST',
+            body: JSON.stringify({data}),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              }
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log('success', data)
+            alert('book added successfully')
+        })
     }
     return (
         <div>
