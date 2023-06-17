@@ -7,6 +7,14 @@ const AddBook = () => {
     const [price, setPrice] = useState('')
     const [featured, setFeatured] = useState('')
 
+    const reset = () => {
+        setName('')
+        setAuthor('')
+        setThumbnail('')
+        setPrice('')
+        setFeatured('')
+    }
+
     const handleAddBook = (e) => {
         e.preventDefault();
         const data = {
@@ -29,6 +37,7 @@ const AddBook = () => {
             console.log('success', data)
             alert('book added successfully')
         })
+        reset();
     }
     return (
         <div>
