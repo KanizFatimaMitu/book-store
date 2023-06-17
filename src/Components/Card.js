@@ -1,10 +1,11 @@
 import React from 'react';
 
 const Card = ({ book }) => {
-    const { _id, name, author, thumbnail, price } = book;
+    const { name, author, thumbnail, price } = book.data;
+    console.log(book)
     return (
         <div>
-            <div class="book-card m-4">
+            <div class="book-card mt-4">
                 <img class="h-[240px] w-[170px] object-cover lws-bookThumbnail"
                     src={thumbnail} alt="book" />
                 <div class="flex-1 h-full pr-2 pt-2 flex flex-col">
