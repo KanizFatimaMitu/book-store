@@ -14,6 +14,8 @@ const BookCard = () => {
             {
                 books.map(book => <Card
                     book={book}
+                    books={books}
+                    setBooks={setBooks}
                 ></Card>)
             }
 

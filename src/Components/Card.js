@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-const Card = ({ book }) => {
-    const [books, setBooks] = useState([]);
+const Card = ({ book, books, setBooks }) => {
+   
     const { _id } = book;
     const { name, author, thumbnail, price } = book.data;
+    
     console.log(book);
 
     const handleDelete = (id) => {
@@ -15,10 +16,11 @@ const Card = ({ book }) => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    if (data.deletedCount > 0) {
+                    if (data.deletedCount >= 0) {
                         console.log('deleted');
                         const remaining = books.filter(book => book._id !== id);
-                        setBooks(remaining)
+                        setBooks(remaining);
+                        console.log(remaining)
                     }
                 })
         }
